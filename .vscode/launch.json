@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open index.html",
+            "webRoot": "${workspaceFolder}",
+            "file": "c:\\Users\\johan\\Desktop\\desarrolode_apps\\pagina-bienvenida\\src\\index.html"
+        }
+    ]
+}
