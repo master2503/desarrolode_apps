@@ -1,0 +1,22 @@
+<!-- Menú Principal -->
+<div class="card menu-card" *ngIf="vista === 'menu'">
+  <h1>Menú Principal</h1>
+  <div class="menu-actions">
+    <button (click)="vista='calculator'"> Calculadora</button>
+    <button (click)="vista='productos'"> Lista de Productos</button>
+  </div>
+</div>
+
+<!-- Calculadora -->
+<app-first *ngIf="vista === 'calculator'"></app-first>
+
+<!-- Lista de productos -->
+<app-second *ngIf="vista === 'productos'"></app-second>
+
+<!-- Botón volver -->
+<div *ngIf="vista !== 'menu'" class="back-wrap">
+  <button (click)="vista='menu'">⬅️ Volver al Menú</button>
+</div>
+
+
+<router-outlet />
