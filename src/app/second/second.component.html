@@ -1,1 +1,23 @@
-<p>second works!</p>
+<div class="form-container">
+  <h2> Lista de datos </h2>
+
+  <div class="row">
+    <input 
+      type="text" 
+      [(ngModel)]="nuevoProducto" 
+      placeholder="Escribe un producto"
+    />
+    <button (click)="agregarProducto()">Agregar + </button>
+  </div>
+
+  <ul>
+    <li *ngFor="let producto of productos; let i = index">
+      {{ producto }}
+      <button (click)="eliminarProducto(i)" class="btn-small"> X </button>
+    </li>
+  </ul>
+
+  <div class="row" style="margin-top:10px;">
+    <button (click)="limpiarLista()" class="btn-small">🗑 Limpiar lista</button>
+  </div>
+</div>

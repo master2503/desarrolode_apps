@@ -1,22 +1,30 @@
-<!-- Menú Principal -->
-<div class="card menu-card" *ngIf="vista === 'menu'">
-  <h1>Menú Principal</h1>
-  <div class="menu-actions">
-    <button (click)="vista='calculator'"> Calculadora</button>
-    <button (click)="vista='productos'"> Lista de Productos</button>
+  <!-- Menú Principal -->
+  <div class="card menu-card" *ngIf="vista === 'menu'">
+    <h1>Menú Principal</h1>
+    <div class="menu-actions">
+      <button (click)="vista='calculator'"> Calculadora</button>
+      <button (click)="vista='productos'"> Lista de Productos</button>
+      <button (click)="vista='componente-api'"> Personajes de Rick and Morty</button>
+    </div>
   </div>
-</div>
 
-<!-- Calculadora -->
-<app-first *ngIf="vista === 'calculator'"></app-first>
+  <!-- Calculadora -->
+  <app-first *ngIf="vista === 'calculator'"></app-first>
 
-<!-- Lista de productos -->
-<app-second *ngIf="vista === 'productos'"></app-second>
+  <!-- Lista de productos -->
+  <app-second *ngIf="vista === 'productos'"></app-second>
 
-<!-- Botón volver -->
-<div *ngIf="vista !== 'menu'" class="back-wrap">
-  <button (click)="vista='menu'">⬅️ Volver al Menú</button>
-</div>
+  <!-- Direccionamiento a componente-api -->
+  <app-componente-api *ngIf="vista === 'componente-api'"></app-componente-api>
+
+  
+
+  
+
+  <!-- Botón volver -->
+  <div *ngIf="vista !== 'menu'" class="back-wrap">
+    <button (click)="vista='menu'">⬅️ Volver al Menú</button>
+  </div>
 
 
-<router-outlet />
+  <router-outlet />

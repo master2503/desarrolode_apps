@@ -3,6 +3,8 @@ import { AppComponent } from './app.component';
 
 import {FirstComponent} from './first/first.component';
 import {SecondComponent} from './second/second.component';
+import { ComponenteApiComponent } from './componente-api/componente-api.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {

@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { ComponenteApiComponent } from './componente-api/componente-api.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FirstComponent, SecondComponent],
+  imports: [CommonModule, RouterOutlet, FirstComponent, SecondComponent , ComponenteApiComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

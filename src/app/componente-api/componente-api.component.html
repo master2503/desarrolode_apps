@@ -1,0 +1,7 @@
+<h2>Personajes de Rick and Morty</h2>
+<ul>
+  <li *ngFor="let personaje of personajes">
+    <img [src]="personaje.image" alt="{{personaje.name}}" width="80">
+    {{ personaje.name }} - {{ personaje.status }}
+  </li>
+</ul>

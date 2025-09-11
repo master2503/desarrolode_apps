@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecondComponent } from './second.component';
+import { ComponenteApiComponent } from './componente-api.component';
 
-describe('SecondComponent', () => {
-  let component: SecondComponent;
-  let fixture: ComponentFixture<SecondComponent>;
+describe('ComponenteApiComponent', () => {
+  let component: ComponenteApiComponent;
+  let fixture: ComponentFixture<ComponenteApiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SecondComponent]
+      imports: [ComponenteApiComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SecondComponent);
+    fixture = TestBed.createComponent(ComponenteApiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
