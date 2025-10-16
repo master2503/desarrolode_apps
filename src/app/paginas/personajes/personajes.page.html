@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Personajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let p of personajes">
+      <img [src]="p.image" alt="imagen personaje" />
+      <ion-card-header>
+        <ion-card-title>{{ p.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Especie:</strong> {{ p.species }}</p>
+        <p><strong>Estado:</strong> {{ p.status }}</p>
+        <ion-button color="danger" (click)="matar(p)">Matar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
+

@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Otra Pagina</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-input 
+          label="Agregar tarea" 
+          label-placement="stacked" 
+          placeholder="Escriba la tarea aquí"
+          [(ngModel)]="tareaInput"
+        ></ion-input>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="ion-padding-top">
+      <ion-col size="12">
+        <ion-button 
+          expand="block" 
+          (click)="agregarTarea()" 
+          [disabled]="tareaInput.trim().length === 0"
+        >
+          Guardar Tarea </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Tareas Pendientes</ion-label>
+    </ion-list-header>
+    
+    <ion-item *ngFor="let tarea of tareas">
+      <ion-label>{{ tarea }}</ion-label>
+      <ion-icon slot="end" name="ellipse-outline"></ion-icon> </ion-item>
+  </ion-list>
+
+</ion-content>
